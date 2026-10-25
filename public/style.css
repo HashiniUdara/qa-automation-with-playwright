@@ -1,0 +1,492 @@
+:root {
+    font-family: Inter, system-ui, Arial, sans-serif;
+    color: #18243a;
+    background: #f4f7fb
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0
+}
+
+header {
+    background: #112e52;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px clamp(16px, 3vw, 48px)
+}
+
+h1 {
+    font-size: 23px;
+    margin: 0 0 5px
+}
+
+h2 {
+    font-size: 18px;
+    margin: 0 0 13px
+}
+
+header p {
+    margin: 0;
+    color: #becce0;
+    font-size: 13px
+}
+
+main {
+    max-width: 1420px;
+    margin: 22px auto;
+    padding: 0 16px;
+    display: grid;
+    gap: 18px
+}
+
+.panel {
+    background: white;
+    border: 1px solid #d5deeb;
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 1px 2px #00000008
+}
+
+.muted {
+    font-size: 13px;
+    color: #52637d;
+    margin-top: -5px
+}
+
+.nav {
+    border: 1px solid #b9cbe3;
+    color: #124b92;
+    background: #fff;
+    padding: 9px 13px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 650;
+    white-space: nowrap
+}
+
+.between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px
+}
+
+.group {
+    font-size: 12px;
+    font-weight: 750;
+    margin: 18px 0 9px;
+    padding-top: 4px;
+    border-bottom: 1px solid #edf0f5;
+    padding-bottom: 8px
+}
+
+.case {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #d1dae6;
+    border-radius: 7px;
+    padding: 11px 13px;
+    margin: 7px 0;
+    font-size: 13px;
+    cursor: pointer
+}
+
+.case:hover {
+    background: #f6faff
+}
+
+.case input {
+    accent-color: #12365e;
+    width: 16px;
+    height: 16px
+}
+
+.case strong {
+    font-weight: 650
+}
+
+.pill {
+    font-size: 10px;
+    font-weight: 750;
+    border-radius: 30px;
+    padding: 3px 7px;
+    color: white;
+    display: inline-block
+}
+
+.CRITICAL {
+    background: #901b27
+}
+
+.HIGH {
+    background: #c64c19
+}
+
+.MEDIUM {
+    background: #b17800
+}
+
+.LOW {
+    background: #224ca2
+}
+
+.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px
+}
+
+button {
+    background: #112e52;
+    border: 1px solid #112e52;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 700
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed
+}
+
+button.outline {
+    background: #fff;
+    color: #112e52
+}
+
+#message {
+    color: #b13d24;
+    font-size: 13px
+}
+
+pre {
+    font-size: 12px;
+    background: #0e1b2b;
+    color: #d6e6fd;
+    white-space: pre-wrap;
+    overflow: auto;
+    max-height: 270px;
+    min-height: 100px;
+    padding: 14px;
+    border-radius: 8px;
+    line-height: 1.5
+}
+
+iframe {
+    border: 1px solid #b9cbe3;
+    border-radius: 8px;
+    width: 100%;
+    height: 550px;
+    background: #151b25
+}
+
+select {
+    border: 1px solid #cbd6e4;
+    border-radius: 6px;
+    padding: 9px;
+    max-width: 100%
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(120px, 1fr));
+    gap: 9px;
+    margin-top: 15px
+}
+
+.stat {
+    border: 1px solid #cbd6e4;
+    border-radius: 8px;
+    padding: 13px
+}
+
+.stat small {
+    color: #52637d;
+    display: block;
+    font-size: 11px
+}
+
+.stat strong {
+    font-size: 22px
+}
+
+.table-wrap {
+    overflow: auto
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px
+}
+
+th {
+    background: #e5e9ef;
+    text-align: left;
+    padding: 11px 10px;
+    white-space: nowrap
+}
+
+td {
+    border-bottom: 1px solid #dce3ed;
+    padding: 12px 10px;
+    vertical-align: top
+}
+
+tr.failed {
+    background: #fff0f0
+}
+
+.status {
+    border-radius: 25px;
+    padding: 4px 9px;
+    color: white;
+    font-size: 11px;
+    font-weight: 700
+}
+
+.passed {
+    background: #168343
+}
+
+.failed {
+    background: #a51f2c
+}
+
+.skipped {
+    background: #76839a
+}
+
+.reason {
+    min-width: 185px;
+    max-width: 360px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: monospace;
+    font-size: 11px
+}
+
+.screenshot {
+    max-width: 175px;
+    max-height: 110px;
+    border: 1px solid #9daabd;
+    border-radius: 5px
+}
+
+#progress {
+    font-size: 14px;
+    margin-bottom: 10px
+}
+
+@media(max-width:850px) {
+    header {
+        flex-direction: column;
+        align-items: start
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    iframe {
+        height: 350px
+    }
+
+    header h1 {
+        font-size: 19px
+    }
+}
+
+
+/* =========================================
+   QA REPORT - STATUS & CRITICALITY BADGES
+   ========================================= */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+/* Test results */
+
+.badge.passed {
+  background-color: #DCFCE7;
+  color: #166534;
+  border-color: #86EFAC;
+}
+
+.badge.failed {
+  background-color: #FEE2E2;
+  color: #991B1B;
+  border-color: #FCA5A5;
+}
+
+.badge.skipped {
+  background-color: #F1F5F9;
+  color: #475569;
+  border-color: #CBD5E1;
+}
+
+/* Criticality levels */
+
+.badge.critical {
+  background-color: #7F1D1D;
+  color: #FFFFFF;
+  border-color: #991B1B;
+}
+
+.badge.high {
+  background-color: #FFEDD5;
+  color: #9A3412;
+  border-color: #FDBA74;
+}
+
+.badge.medium {
+  background-color: #FEF3C7;
+  color: #92400E;
+  border-color: #FCD34D;
+}
+
+.badge.low {
+  background-color: #DBEAFE;
+  color: #1E40AF;
+  border-color: #93C5FD;
+}
+
+/* Improve result table readability */
+
+#results td {
+  padding: 12px 10px;
+  vertical-align: middle;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+#criticality td {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+#results tr:hover,
+#criticality tr:hover {
+  background-color: #F8FAFC;
+}
+
+#results td:nth-child(7) {
+  color: #475569;
+  font-size: 11px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/*  */
+
+/* Professional QA result badges */
+
+.badge.passed {
+  background: #DCFCE7 !important;
+  color: #166534 !important;
+  border: 1px solid #86EFAC;
+}
+
+.badge.failed {
+  background: #FEE2E2 !important;
+  color: #991B1B !important;
+  border: 1px solid #FCA5A5;
+}
+
+.badge.skipped {
+  background: #F1F5F9 !important;
+  color: #475569 !important;
+  border: 1px solid #CBD5E1;
+}
+
+/* Criticality badges */
+
+.badge.critical {
+  background: #7F1D1D !important;
+  color: #FFFFFF !important;
+}
+
+.badge.high {
+  background: #FFEDD5 !important;
+  color: #9A3412 !important;
+}
+
+.badge.medium {
+  background: #FEF3C7 !important;
+  color: #92400E !important;
+}
+
+.badge.low {
+  background: #DBEAFE !important;
+  color: #1E40AF !important;
+}
+
+/* Badge readability */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Summary cards */
+
+#stats .stat:nth-child(2) {
+  background: #F0FDF4;
+  border: 1px solid #86EFAC;
+}
+
+#stats .stat:nth-child(2) strong {
+  color: #166534;
+}
+
+#stats .stat:nth-child(3) {
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+}
+
+#stats .stat:nth-child(3) strong {
+  color: #991B1B;
+}
+
+#stats .stat:nth-child(4) {
+  background: #EFF6FF;
+  border: 1px solid #93C5FD;
+}
+
+#stats .stat:nth-child(4) strong {
+  color: #1E40AF;
+}

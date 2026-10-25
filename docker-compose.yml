@@ -1,0 +1,16 @@
+services:
+  qa-dashboard:
+    build: .
+    ports:
+      - "127.0.0.1:3000:3000"
+      - "127.0.0.1:6080:6080"
+    environment:
+      BASE_URL: https://the-internet.herokuapp.com
+      HEADED: "1"
+      SLOW_MO: "250"
+      PORT: "3000"
+      RUNS_DIR: /app/runs
+    volumes:
+      - ./runs:/app/runs
+    shm_size: "1gb"
+    restart: unless-stopped
